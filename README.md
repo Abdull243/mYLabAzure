@@ -21,11 +21,11 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 The configuration details of each machine may be found below.
 | Name       | Function          | IP Address (Internal)| IP Address (External)| Operating System |
 |------------|-------------------|----------------------|----------------------|------------------|
-| Jump Box   | Gateway           |    10.0.0.4          |     40.121.68.35     |    Linux         |
-| Web-1      | Web Server 1      |    10.0.0.5          |                      |    Linux         |
-| Web-2      | Web Server 2      |    10.0.0.6          |                      |    Linux         |
-| web-3      | Web Server 3      |    10.0.0.7          |                      |    Linux         |
-| ELK Server | Monitoring System |    10.1.0.4          |     40.69.159.116    |    Linux         |
+| Jump Box   | Gateway           |    10.0.0.7          |    52.188.71.144     |    Linux         |
+| Web-1      | Web Server 1      |   10.0.0.13          |                      |    Linux         |
+| Web-2      | Web Server 2      |   10.0.0.14          |                      |    Linux         |
+| web-3      | Web Server 3      |   10.0.0.15          |                      |    Linux         |
+| ELK Server | Monitoring System |    10.1.0.4          |    104.210.50.245    |    Linux         |
 ### Access Policies
 The machines on the internal network are not exposed to the public Internet.
 Only the Jump Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses: 24.245.*.*  (My HOME IP)
@@ -53,9 +53,9 @@ The following screenshot displays the result of running `docker ps` after succes
 ![TODO: Update the path with the name of your screenshot of docker ps output](/Users/iawolope/Desktop/GitHub/Cybersecurity/Diagrams/Docker_PS.png)
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- 10.0.0.5   Web-1
-- 10.0.0.6   Web-2
-- 10.0.0.7   Web-3
+- 10.0.0.13   Web-1
+- 10.0.0.14   Web-2
+- 10.0.0.15   Web-3
 We have installed the following Beats on these machines:
 - Filebeat
 - Metricbeat
@@ -72,8 +72,8 @@ SSH into the Jump Box VM and follow the steps below:
 $ cd /etc/ansible
 $ cat > hosts <<EOF
 [webservers]
-10.0.0.5
-10.0.0.6
+10.0.0.13
+10.0.0.14
 [elk]
 10.1.0.4
 EOF
