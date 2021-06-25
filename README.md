@@ -19,6 +19,7 @@ Load balancing ensures that the application will be highly available, in additio
 - Access controls will ensure that only authorized users — namely, ourselves — will be able to connect in the first place.
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the file systems of the VMs on the network, as well as watch systems metrics such as CPU usage; attempted SSH logins; sudo escalation failures; etc.
 The configuration details of each machine may be found below.
+
 | Name       | Function          | IP Address (Internal)| IP Address (External)| Operating System |
 |------------|-------------------|----------------------|----------------------|------------------|
 | Jump Box   | Gateway           |    10.0.0.7          |    52.188.71.144     |    Linux         |
